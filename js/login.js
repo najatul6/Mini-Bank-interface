@@ -7,7 +7,7 @@ document.getElementById('login-btn').addEventListener('click', function(){
     const password = passwordField.value;
 
     if(email === 'najatulislam37@gmail.com' && password === 'King@1&12' ){
-        window.location.href ='statement-summury.html';
+        window.location.href ='./tab/statement-summury.html';
     }
     else{
         alert(
