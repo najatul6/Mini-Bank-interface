@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBL Bank Account | Statement</title>
+
+    <!-- Tailwind CSS Script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Poppins Font import From Google  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Kit -->
+    <script src="https://kit.fontawesome.com/8174215003.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('./resource/statement-bgpage.jpg'), linear-gradient(90deg, rgb(9, 61, 129) 0%, rgb(19, 49, 66) 0%, rgb(12, 54, 76) 100%);
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-fixed">
+    <header class="w-3/4 mx-auto mt-[10%]">
+        <h2 class="text-center text-5xl font-semibold text-white uppercase">PBL Bank Limited</h2>
+    </header>
+
+    <main>
+        <!-- Transaction Summary Section  -->
+        <section class="mt-8">
+            <div class="grid grid-cols-3 gap-4 w-3/4 mx-auto text-white">
+                <div class="bg-yellow-500 p-8 rounded-lg">
+                    <h4 class="text-3xl mb-2">Deposit</h4>
+                    <h2 class="text-5xl font-medium">$<span id="deposit-total">00</span></h2>
+                </div>
+                <div class="bg-rose-600 p-8 rounded-lg">
+                    <h4 class="text-3xl mb-2">Withdraw</h4>
+                    <h2 class="text-5xl font-medium">$<span id="withdraw-total">00</span></h2>
+                </div>
+                <div class="bg-lime-500 p-8 rounded-lg">
+                    <h4 class="text-3xl mb-2">Balance</h4>
+                    <h2 class="text-5xl font-medium">$<span id="balance-total">1240</span></h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deposit And Withdraw Section  -->
+        <section class="mt-8 w-3/4 mx-auto">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-violet-500 p-8 rounded-lg">
+                    <h4 class="text-4xl mb-4 text-white">Deposit Now</h4>
+                    <input id="deposit-field" class="w-3/4 px-4 py-3 rounded block" type="text"
+                        placeholder="$ Amount you want to deposit">
+                    <button id="deposit-btn"
+                        class="rounded-lg px-6 py-2 mt-4 bg-teal-600 text-white font-semibold text-lg hover:bg-teal-500">Deposit
+                        Now</button>
+                </div>
+                <div class="bg-rose-600 p-8 rounded-lg">
+                    <h4 class="text-4xl mb-4 text-white">Withdraw Now</h4>
+                    <input id="withdraw-field" class="w-3/4 px-4 py-3 rounded block" type="text"
+                        placeholder="$ Amount you want to withdraw">
+                    <button id="withdraw-btn"
+                        class="rounded-lg px-6 py-2 mt-4 bg-amber-400 text-white font-semibold text-lg hover:bg-amber-500">Withdraw
+                        Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
